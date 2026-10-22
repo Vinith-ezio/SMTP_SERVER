@@ -1,0 +1,9 @@
+[project]
+name = "ezio-smtp-server"
+version = "1.0.0"
+description = "Local development SMTP server with optional Hostinger relay and camera alerts"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.unittest]
+# Run tests with: python -m unittest discover -s tests -v

@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EZIO Camera Alert</title>
+</head>
+<body style="margin:0;padding:0;background:#f1f5f9;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+         style="background:#f1f5f9;padding:24px 10px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+               style="max-width:680px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;">
+
+          <!-- EZIO branded header -->
+          <tr>
+            <td style="background:#102a43;padding:26px 28px;color:#ffffff;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="72" valign="middle">
+                    <!-- Replace the URL with your publicly accessible EZIO logo URL -->
+                    <img src="https://YOUR-DOMAIN/logo.png"
+                         width="64" alt="EZIO Logo"
+                         style="display:block;width:64px;height:auto;border:0;">
+                  </td>
+                  <td valign="middle" style="padding-left:14px;">
+                    <div style="font-size:20px;font-weight:bold;letter-spacing:1px;">
+                      EZIO SOLUTIONS
+                    </div>
+                    <div style="font-size:11px;letter-spacing:1.5px;color:#cbd5e1;margin-top:5px;">
+                      INTELLIGENT MONITORING SYSTEMS
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <div style="border-top:1px solid #456078;margin:22px 0 18px;"></div>
+
+              <div style="font-size:11px;letter-spacing:1.5px;color:#7dd3fc;">
+                AUTOMATED SECURITY NOTIFICATION
+              </div>
+              <h1 style="font-size:24px;line-height:1.3;margin:10px 0;color:#ffffff;">
+                Camera cleanliness alert
+              </h1>
+              <p style="margin:0;font-size:14px;color:#e2e8f0;">
+                Severity: <strong>{{ severity }}</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Main message -->
+          <tr>
+            <td style="padding:28px;">
+              <h2 style="font-size:19px;margin:0 0 12px;color:#102a43;">
+                Camera inspection required
+              </h2>
+              <p style="font-size:14px;line-height:1.7;color:#475569;margin:0 0 22px;">
+                The vision monitoring system has detected that a camera may be
+                dirty or obstructed. Please review the details below and take
+                the appropriate action.
+              </p>
+
+              <!-- Camera details -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                     style="border:1px solid #e2e8f0;border-radius:8px;">
+                <tr>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;width:38%;font-size:13px;color:#64748b;">
+                    Camera ID
+                  </td>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:14px;font-weight:bold;overflow-wrap:anywhere;">
+                    {{ camera_id }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:13px;color:#64748b;">
+                    Camera name
+                  </td>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:14px;overflow-wrap:anywhere;">
+                    {{ camera_name }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:13px;color:#64748b;">
+                    Location
+                  </td>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:14px;overflow-wrap:anywhere;">
+                    {{ location }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:13px;color:#64748b;">
+                    Detected at
+                  </td>
+                  <td style="padding:13px 16px;border-bottom:1px solid #e2e8f0;font-size:14px;">
+                    {{ detected_at }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:13px 16px;font-size:13px;color:#64748b;">
+                    Model confidence
+                  </td>
+                  <td style="padding:13px 16px;font-size:14px;font-weight:bold;">
+                    {{ confidence }}
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Detection details -->
+              <h3 style="font-size:16px;color:#102a43;margin:26px 0 8px;">
+                Detection details
+              </h3>
+              <p style="font-size:14px;line-height:1.7;color:#475569;margin:0 0 22px;">
+                {{ details }}
+              </p>
+
+              <!-- Recommended action -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                     style="background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;">
+                <tr>
+                  <td style="padding:16px;">
+                    <div style="font-size:15px;font-weight:bold;color:#9a3412;margin-bottom:8px;">
+                      Recommended action
+                    </div>
+                    <p style="font-size:14px;line-height:1.7;color:#7c2d12;margin:0;">
+                      Inspect the camera lens and protective cover. Clean if
+                      necessary, then verify that the live camera feed is clear
+                      and functioning correctly.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Professional signature -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                     style="margin-top:28px;border-top:1px solid #e2e8f0;">
+                <tr>
+                  <td style="padding-top:22px;">
+                    <p style="font-size:14px;color:#475569;margin:0 0 6px;">
+                      Regards,
+                    </p>
+                    <p style="font-size:17px;font-weight:bold;color:#102a43;margin:0 0 5px;">
+                      EZIO Monitoring Team
+                    </p>
+                    <p style="font-size:13px;color:#64748b;margin:0 0 14px;">
+                      Intelligent Monitoring &amp; Automation
+                    </p>
+                    <p style="font-size:11px;line-height:1.6;color:#94a3b8;margin:0;">
+                      This is an automated notification generated by the EZIO
+                      vision monitoring system. This mailbox may not be
+                      monitored; please do not reply.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background:#f8fafc;border-top:1px solid #e2e8f0;padding:16px 28px;text-align:center;">
+              <p style="font-size:11px;color:#94a3b8;margin:0;">
+                &copy; EZIO Solutions | Automated Camera Monitoring
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
